@@ -1,0 +1,302 @@
+<<<<<Lesson 1>>>>>
+1.comment
+2.<noscript>
+3.alert() and window.alert()
+4.document.write() and document.writeln() (<pre>)
+5.console.log()
+6.innerHTML => document.getElementById("test").innerHTML = "Hello";
+7.debugger
+----------------------------------------------------------------------------------------------------------
+<<<<<Lesson 2>>>>>
+1.Data type
+  1.1.Bəsit data tipləri (String (metn), Number (sayı), Boolean (mentiqi))
+  1.2.Birləşik data tipləri (Array (qovluq), Object (obyekt))
+  1.3.Xüsusi data tipləri (Undefined (tanimlanmamis), Null (boş))
+2.Bitlik işləri
+3.Operatorlar
+  3.1.Məntiqi operatorlar (&&(və - false üstün tutur), ||(və ya - true üstün tutur), !(deyil))
+  3.2.Daxil etmə operatorları
+      3.2.1.Bərabərdir (=) ex: a=5, a=b=5
+      3.2.2.Toplama Daxil etmə (+=) ex: a+=b -> a=a+b 
+      3.2.3.Çıxaraq Daxil etmə (-=) ex: a-=b -> a=a-b 
+      3.2.4.Vurma Daxil etmə (*=) ex: a*=b -> a=a*b 
+      3.2.5.Bölmə Daxil etmə (/=) ex: a/=b -> a=a/b 
+      3.2.6.Qalıq Daxil etmə (%=) ex: a%=b -> a=a%b 
+      3.2.7.Üstü Daxil etmə (**=) ex: a**=b -> a=a**b 
+  3.3.Bitlik daxil etmə operatorları
+  ------------------------------------------------------------------------------------------------
+<<<<<Lesson 3>>>>>
+1.Dəyişkənlər
+  1.1.Dəyişkən düzgün adlandırmaq.
+  1.2.Dəyişkənlərdə dırnaq istifadəsi.
+  1.3.Dəyişgənlərin tipləri (var,let,const)
+------------------------------------------------------------------------------------------------
+<<<<<Lesson 4>>>>>
+1.JS`də dəyişkənlər üçün olan methodlar
+  1.1.lenght -> dəyişkənin içində olanların sayını göstərir.
+                metn = "Salam";
+                lenght.metn;
+  1.2.eval() -> mətn kimi yazılan yazıları js koduna çevirmək üçün istifadə olunur
+                var qiymet1 = 10;
+                var qiymet2 = 20;
+                var netice = eval("qiymet1 + qiymet2");
+                var netice1 = eval("10*40");
+                function yoxlama(){
+                  document.write("Salam");
+                }
+                var setr = eval("yoxlama()");
+                document.write(setr);
+  1.3.search()  -> Dəyişkən içərisində parametrik olaraq dəyəri axtarır və ilk uyğun gələn dəyişkənin içindəki indis/index dəyəri göstərər.
+            var metn = "JavaScript";
+            var netice = metn.search("Script"); bu formada yazılan zaman böyük və kiçik hərfə həssas formada olur.
+            var netice1 = metn.search(/script/i); bu formada yazılan zaman böyük və kiçik hərfə həssas formada olmur <<</script/--i-->>> hərfi vacibdir
+  1.4.slice() -> Dəyişkənin içərisindəki məlumatları parametrlər ilə kopyalayır.
+                var melumat = "JavaScript is international language";
+                document.write(melumat);
+
+                var netice = melumat.slice(15) ->slice(15,25);
+                document.write(netice);
+  1.5.substring() -> Dəyişkənin içərisindəki məlumatları parametrlər ilə kopyalayır.(Parametr ->Başlanğıc və Bitiş)
+  qeyd:başlanğıc parametrəsi bitiş parametrəsindən heç vaxt böyük ola bilməz.
+                    var metn = "JavaScript Programming Language";
+                    document.write(metn);
+                    var netice = metn.substring();
+                    document.write(netice);
+
+   substr()      -> Dəyişkənin içərisindəki məlumatları parametrlər ilə kopyalayır.(Parametr ->Başlanğıc və Bitiş(neçə simvol almaq istənilirsə onu qeyd edirik))
+   var netice = metn.substring(-15,10) mənfi olan zaman sağdan sola sayır
+
+  1.6.concat()   -> Bir dəyişkəni əsas sayaraq parametr hissəsinə yazılan dəyişkəni yenidən hazırlayır.
+              var misal = 1;
+              var misal1 = misal.concat() 
+        
+  1.7.repeat()   -> dəyişkənin içindəki dəyəri parametrəyə yazılan say qədər çoxaldır
+            metn.repeat(100);
+  1.8.toString() -> dəyişkənin içindəki dəyəri mətinləşdirir.
+            metn.toString();
+  1.9.String()   -> dəyişkənin içindəki dəyəri mütləq mətinləşdirir.
+            String(metn);
+  1.10.Number()  -> dəyişkənin içindəki dəyəri mütləq rəqəmləşdirir
+  1.11.valueOf() ->
+  1.12.indexOf() ->Dəyişkən içərisində parametrik olaraq dəyəri axtarır və ilk uyğun gələn dəyişkənin içindəki indis/index dəyəri göstərər.
+            var metn = 'JavaScript'; -> böyük və kiçik hərf həssasdır.
+            document.write(metn);
+            var netice = metn.indexOf("Java");
+            var netice = metn.indexOf("Java",15);rəqəmdən sora harada varsa onu tapır.
+            qeyd: əgər məlumat orada yoxdursa -1 dəyəri alır.
+            document.write(netice);
+
+  lastIndexOf()  -> Dəyişkən içərisində parametrik olaraq dəyəri axtarır və son uyğun gələn dəyişkənin içindəki indis/index dəyəri göstərər.
+             var metn = 'JavaScript Java';
+            document.write(metn);
+            var netice = metn.LastIndexOf("Java",32);sonuncu "Java" sözünü tapır.Yazılan rəqəm sayı qədər olan hissəyə qədər axtarır.
+            document.write(netice);
+  1.13.startWith() -> hər hansı bir dəyəri methodun parametr hissəsinə daxil edərək dəyişkənin ƏVVƏLİNDƏ olub olmamasını Boolean(true/false) data tipi ilə göstərir 
+            var metn = "JavaScript superdir";
+            metn.startWith("JavaScript");
+       endsWith()  -> hər hansı bir dəyəri methodun parametr hissəsinə daxil edərək dəyişkənin SONUNDA olub olmamasını Boolean(true/false) data tipi ilə göstərir 
+            var metn = "JavaScript superdir";
+            metn.endsWith("superdir");
+  1.14.trim() ->Dəyişkənin içindəki əvvəlindəki və sonundakı boşluqları təmizləyir.(misal.trim())
+  1.15.includes() ->hər hansı bir dəyəri methodun parametr hissəsinə daxil edərək dəyişkənin içində olub olmamasını Boolean(true/false) data tipi ilə göstərir 
+  qeyd: böyük və kiçik hərfə həssasdır.
+            var metn = "JavaScript";
+            varr netice = metn.includes("Script"); //true 
+            varr netice = metn.includes("asdasfa"); //false
+  1.16.match() ->  hər hansı bir dəyəri methodun parametr hissəsinə daxil edərək dəyişkənin içərisində varsa o dəyərin özünü göstərər.
+      g - dəyişkənin içindəkilərin hamısını nəzərə alar -> metn.match(/Javascript/g);
+      i - böyük və kiçik hərf həssaslığını aradan qaldırar -> metn.match(/Javascript/i);
+      metn.match(/Javascript/gi); hər iki xüsusiyyət işləyər
+       var metn = "JavaScript superdir";
+       metn.match("JavaScript");
+  1.17.replace() ->  hər hansı bir dəyəri methodun birinci parametr hissəsinə daxil edərək dəyişkənin içərisində varsa ikinci parametrdə olan dəyəri birinci parametrdə qeyd olunan dəyərin yerində göstərir.
+        g - dəyişkənin içindəkilərin hamısını nəzərə alar -> metn.replace(/Javascript/g, "php");
+      i - böyük və kiçik hərf həssaslığını aradan qaldırar -> metn.repeat(/Javascript/i, "php");
+        var metn = "JavaScript";
+        document.write(metn.replace("JavaScript","php"));
+  1.18.split() -> dəyişkənin içindəki dəyəri array data tipinə çevirir və parametrik olaraq müdaxilələr edə bilir
+  birinci parametrdə qeyd oluanan hissə arrayın vergül qoyaraq ayırması tələb olunan hissədir.
+  qeyd: böyük və kiçik hərfə həssasdır.
+        var metn = "JavaScript dərsləri";
+        document.write(metn);
+        document.write(metn[2]);
+        
+        var netice = metn.split("a",3); //2ci parametr limit parametridir
+        document.write(netice);
+
+        var netice = metn.split(" ",3); //2ci parametr limit parametridir
+        document.write(netice);
+
+        var netice = metn.split(" ");
+        document.write(netice[2]);
+        
+  1.19.localCompare -> iki dəyişkənin içindəki dəyərləri parametrik olaraq unikod`a əsasən yəni browserə əsasən qarşılaşdırır.
+                      -1 :  birinci dəyişkənin dəyəri ikinci dəyişkənin dəyərindəndən ƏVVƏL gəlirsə
+                       0 :  birinci dəyişkənin dəyəri ikinci dəyişkənin dəyərinə bərabərsə
+                       1 :  birinci dəyişkənin dəyəri ikinci dəyişkənin dəyərindəndən SONRA gəlirsə
+                      var soz1 = "abc";
+                      var soz2 = "abd";
+                      var netice = soz1.localCompare(soz2);
+                      document.write(netice); 
+  1.20.charAt()        ->   dəyişkənin dəyərinin index nömrəsini parametr hissəsinə daxil etdikdə həmin index nömrəsində olan dəyəri göstərir.
+                        var metn = "JavaScript";
+                        document.write(metn.charAt(0));
+       charCodeAt()    -> dəyişkənin dəyərinin index nömrəsini parametr hissəsinə daxil etdikdə həmin dəyərin unicode`unu göstərir.
+                        var metn = "JavaScript";
+                        document.write(metn.charCodeAt(0));
+       fromCharCode()  -> methodun parametr hissəsinə unicodu daxil etdikdə onun hansı simvol olmasını göstərir.
+                        var metn = String.fromCharCode(57);
+                        document.write(metn);
+  1.21.encodeURI()     -> dəyişkənin içində olan bütün dəyərləri UTF-8 formatına salır.
+                        var metn = "JavaScript";
+                        document.write(encodeURI(metn));
+       decodeURI()     -> dəyişkənin içində olan bütün dəyərləri UTF-8 formatından çıxardır.
+                        var metn = "JavaScript";
+                        document.write(decodeURI(metn));                 
+  1.22.encodeURIComponent() -> dəyişkənin içində olan bütün dəyərləri UTF-8 formatına salır.
+                        var metn = "JavaScript";
+                        document.write(encodeURIComponent(metn));
+       decodeURIComponent() -> dəyişkənin içində olan bütün dəyərləri UTF-8 formatından çıxardır.
+                        var metn = "JavaScript";
+                        document.write(decodeURIComponent(metn));
+  1.23.escape()   ->dəyişkənin içində olan bütün dəyərlərin xüsusi simvolları unicode formatına salır.
+                        //escape(metn);
+       unescape() ->dəyişkənin içində olan bütün dəyərlərin xüsusi simvolları unicode formatından çıxardır.
+                        //escape(metn);
+  1.24.toUpperCase() ->dəyişkənin içindəki mətnin hərflərini hamısını BÖYÜK hərf edir.
+                    metn.toUpperCase();
+       toLowerCase() ->dəyişkənin içindəki mətnin hərflərini hamısını KİÇİK hərf edir.
+                    metn.toLowerCase();
+  1.25.toLocaleUpperCase() -> dəyişkənin içindəki mətnin bütün simvollar daxil (UTF-8) hərflərini hamısını BÖYÜK hərf edir.
+                    metn.toLocaleUpperCase();
+       toLocaleLowerCase() -> dəyişkənin içindəki mətnin bütün simvollar daxil (UTF-8) hərflərini hamısını KİÇİK hərf edir.
+                    metn.toLocaleLowerCase();
+  1.26.sub() -> dəyişkənin dəyərini alt simvola çevirir.
+                    var element1 = "C";
+                    var element2 = "2";
+                    document.write(element1 + element2.sub());
+       sup() -> dəyişkənin dəyərini üst simvola çevirir.
+                    var element1 = "C";
+                    var element2 = "2";
+                    document.write(element1 + element2.sup());
+  1.27.big()    -> dəyişkənin dəyərinin fontunu BÖYÜK edir.
+                    metn.big();
+       small()  ->dəyişkənin dəyərinin fontunu KİÇİK edir.
+                    metn.small();
+  1.28.bold()     ->dəyişkənin dəyərinin fontunu bold(qalin) edir.
+                     metn.bold();
+       italics()  ->dəyişkənin dəyərinin fontunu italic edir.
+                     metn.italic();
+       strike()   ->dəyişkənin dəyərinin fontunu üstündən xətt çəkilmiş formaya salır.
+                     metn.strike();
+       fixed()    ->dəyişkənin dəyərinin fontunu teletype fontlu vəziyyətə salır.
+                     metn.fixed();
+  1.29.fontcolor() ->dəyişkənin dəyərini rəngləndirir.//parametrik
+                    var reng = "JavaScript";
+                    document.write(reng.fontcolor("green"));
+                    document.write(reng.fontcolor("#000"));
+       fontsize()  ->dəyişkənin dəyərinin fontuna ölçüləndirir.//parametrik
+                    var metn = "JavaScript";
+                    document.write(metn.fontsize(1)) 1->7 ə qədərdir.
+
+  1.30.anchor() ->dəyişkənin dəyərinə link xüsusiyyəti verir parametr hissəsi isə linkin  'name' hissənini doldurur.
+                    var metn = "Google";
+                    document.write(metn.anchor("send");
+       link()   ->dəyişkənin dəyərinə link xüsusiyyəti verir parametr hissəsi isə linkin  'href' hissənini doldurur.
+                    var metn = "Google";
+                    document.write(metn.link("http://google.com");
+
+------------------------------------------------------------------------------------------------
+<<<<<Lesson 5>>>>>
+ 1. if      -> əgər
+    elseif  -> deyilsə əgər
+    else    ->  deyilsə
+
+ 2. if, else if ve else (daxili və xarici)
+
+ 3. switch, case, default ve break 
+
+ 4. ternary (A?A:A)
+
+ 5. try, catch, finally ve throw 
+
+------------------------------------------------------------------------------------------------
+<<<<<Lesson 6>>>>>
+1.Döngülər(loop)
+  1.1.while və do while
+            while(şərt){
+              .....
+            }
+            do{
+              .....
+            }while(şərt)
+  1.2.for 
+        1-ci Parametr dəyişkənin daxil edilməsi
+        2-ci Parametr şərtin daxil edilməsi
+        3-cü Parametr artırmanın və azaltmanın daxil edilməsi
+
+            for(1-ci Parametr, 2-ci Parametr, 3-cü Parametr){
+              .......
+            }
+  1.3.for in
+        var misal = ["JS" , "PHP", "C"];
+        var netice;
+        for(netice in misal){
+          document.write(misal[netice]);
+        }
+  1.4. break və continue ifadəsi
+
+------------------------------------------------------------------------------------------------
+<<<<<Lesson 7>>>>>    
+1.Funksiyalar
+  1.1.Funksiyalarda adlandırmaq
+  1.2.Dəyişkənin içində funksiya yaratmaq (Dəyişkənən verilən ad funksiyaya aid edilir)
+  1.3.Dəyişkənlər və Fynksiyalar -> Daxili hissə və xarici hissə -
+  1.4.Return ifadəsi
+  1.5.Funksiyalarda Şərt ifadələri(if,elseif,else)
+  1.6.Avtomatik işləyən Funksiyalar(öz-özünü çağıran quruluş)
+  1.7.Funksiyalarda parametr artırmaq
+  1.8.Funksiyalarda default parametr vermək
+  1.9.Avtomatik işləyən Funksiyalar(öz-özünü çağıran quruluş) parametr vermək
+  1.10.Avtomatik işləyən Funksiyalar(öz-özünü çağıran quruluş) default parametr vermək
+  1.11.Bir funksiyadan digər funksiyaya dəyər göndərmək
+  1.12.İç içə Funksiyalar
+  1.13.İç içə Funksiyalarda parametr vermək(qayda1) və Funksiyanı çağırmaq
+  1.14.İç içə Funksiyalarda parametr vermək(qayda2)
+  1.15.İç içə Funksiyalarda alt funksiyanın parametrni dəyişmək
+  1.16.İç içə Funksiyalarda alt funksiyanın parametrni almaq
+  1.17.Öz-özünü çağıran funksiya quruluşu -
+  1.18.Funksiyalarda lenght methodun
+  1.19.Funksiyalarda arguments
+  1.20.Funksiyalarda caller
+  1.21.Return ifadəsi içərisində funksiya qurmaq
+
+------------------------------------------------------------------------------------------------
+<<<<<Lesson 8>>>>>    
+1.Array (arraylar,qovluqlar,diziler)
+  1.1.Array quruluşu
+  1.2.Arraylarda dırnaq quruluşu
+  1.3.Bir dəyişkənin içində olan Arrayı başqa dəyişkənin içinə yerləşdirmək
+  1.4.Tək bir ifadə ilə çoxlu Array hazırlamaq
+  1.5.Birinci dəyişkəni yaradıb sonra Arrayı qurmaq
+  1.6.String ifadəyə index rəqəmini çağırdıqda Arraylardakı kimi onun simvol sayını çağırır.
+  1.7.Tək tək Dəyişkən kimi Array qurmaq
+  1.8.Arrayların index rəqəmlərinə müdaxilə etmək
+  1.9 Əvvəlcədən hazırlanmış dəyişkənin içindəki dəyərə müdaxilə etmək.
+  1.10.İç içə çox hissəli Array quruluşu
+  1.11.Bir dəyişkənə içindəki Arrayla Dəişkənlərin Arraylarını daxil etmək.
+  1.12.Array method = isArray() -> Bir dəyişkənin içindəki dəyərin Array olub olmadığını yoxlayır.(true - false)
+          ex: var misal1 = [1, "js"];
+              var netice = Array.isArray(misal1);
+  1.13.For in (loop)
+  1.14.
+
+
+------------------------------------------------------------------------------------------------
+<<<<<Lesson 9>>>>>    
+1.
+
+
+------------------------------------------------------------------------------------------------
+<<<<<Lesson 10>>>>>    
+1.
