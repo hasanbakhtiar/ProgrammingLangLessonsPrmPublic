@@ -1,0 +1,180 @@
+
+
+1.React`dakı hər şey _________________
+A)Module
+B)Component
+C)Package
+D)Class
+
+
+
+3 .Babel nədir?
+A)Kitabxana
+B)Framework
+C)React Sistemi
+D)Compiler 
+
+4 .Bir react component`i nə qədər döndürər?
+A)1 Element
+B)2 Elements
+C)Çoxlu Elements
+D)Element döndürmür
+
+5 ."webpack" nə üçün istifadə edilir?
+A)modulları sıxışdırmaq üçün
+B)filter üçün
+C)debug üçün
+D)ReactDOM üçün
+
+6 .ReactJS nədir?
+A)Framework
+B)User-interface framework
+C)Qarşılıqlı interfeyslər qurmaq üçün kitabxana
+D)Programlaşdırma dili
+
+7 .ReactJS`i məhdudlaşdıran amilər hansılarıdır?
+A)React yalnız tətbiqin interfeys hissəsidir, buna görə inkişaf üçün digər texnologiyaların köməyinə ehtiyacımız var
+B)React, inline tərtibatı və JSX istifadə edir. 
+C)React kitabxanası çox böyükdür
+D)Bunların hamısı
+
+
+8 .How can you access the state of a component from inside of a member function?
+A)this.getState()
+B)this.prototype.stateValue
+C)this.state
+D)this.values
+
+9 .Props are __________ into other components
+A)Injected
+B)Methods
+C)Both A and B
+D)All of these
+
+
+10 .Which of the following API is a MUST for every ReactJS component?
+A)getInitialState
+B)render
+C)renderComponent
+D)None of the Above
+
+11 .What port is the default where the webpack-dev-server will run?
+A)3000
+B)3306
+C)8080
+D)None of the above
+
+
+12 .In React what is used to pass data to a component from outside?
+A)setState
+B)props
+C)PropTypes
+D)render with arguments
+
+
+13 .What is a react.js in MVC?
+A)Model
+B)Controller
+C)Router
+D)Middleware
+
+
+14 .ReactJS uses _____ to increase performance
+A)Virtual DOM
+B)Original DOM
+C)Both 1 & 2
+D)None of the above
+
+
+15 .Keys are given to a list of elements in react. These keys should be -
+A)Unique in the DOM
+B)Do not requires to be unique
+C)Unique among the siblings only
+D)All of the above
+
+
+16 .Which of the following is the correct data flow sequence of flux concept?
+A)Dispatcher->Action->Store->View
+B)Action->Dispatcher->Store->View
+C)Action->Dispatcher->View->Store
+D)Action->Store->Dispatcher->View
+
+
+17 .What is the name of React.js Developer ?
+A)Tim Lee
+B)Jordan Lee
+C)Jordan mike
+D)Jordan Walke
+
+
+18 .Who Develop React.js?
+A)Google
+B)Apple
+C)Facebook
+D)Twitter
+
+
+19 ............... helps react for keeping their data unidirectional
+A)JSX
+B)Flux
+C)Dom
+D)Props
+
+20 .At the highest level, React components have lifecycle events that fall into
+A)Initialization
+B)State/Property Updates
+C)Destruction
+D)All of these
+
+21 .If you want to import just the Component from the React library, what syntax do you use?
+A)import React.Component from 'react'
+B)import [ Component ] from 'react'
+C)import Component from 'react'
+D)import { Component } from 'react'
+
+
+22 .If a function component should always render the same way given the same props, what is a simple performance optimization available for it?
+A)Wrap it in the React.memo higher-order component.
+B)Implement the useReducer Hook.
+C)Implement the shouldComponentUpdate lifecycle method.
+D)Implement the useMemo Hook.
+
+
+23 .How do you fix the syntax error that results from running this code?
+const person =(firstName, lastName) =>
+       {
+            first: firstName,
+            last: lastName
+        }
+console.log(person("jhon", "Wolson"))
+A)Wrap the object in parentheses.
+B)Call the function from another file.
+C)Replace the with an array
+D)Add a return statement before the first curly brace.
+
+
+
+23 .How do you fix the syntax error that results from running this code?
+const person =(firstName, lastName) =>
+       {
+            first: firstName,
+            last: lastName
+        }
+console.log(person("jhon", "Wolson"))
+
+A)Wrap the object in parentheses.
+B)Call the function from another file.
+C)Replace the with an array
+D)Add a return statement before the first curly brace.
+
+
+
+24 .If you see the following import in a file, what is being used for state management in the component?
+import React, {useState} from 'react';
+A)stateful components
+B)class components
+C)math
+D)React Hooks
+
+
+25

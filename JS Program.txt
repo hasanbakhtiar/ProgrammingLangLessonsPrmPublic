@@ -51,13 +51,13 @@
             var netice = metn.search("Script"); bu formada yazılan zaman böyük və kiçik hərfə həssas formada olur.
             var netice1 = metn.search(/script/i); bu formada yazılan zaman böyük və kiçik hərfə həssas formada olmur <<</script/--i-->>> hərfi vacibdir
   1.4.slice() -> Dəyişkənin içərisindəki məlumatları parametrlər ilə kopyalayır.
+  qeyd:başlanğıc parametrəsi bitiş parametrəsindən heç vaxt böyük ola bilməz.
                 var melumat = "JavaScript is international language";
                 document.write(melumat);
 
                 var netice = melumat.slice(15) ->slice(15,25);
                 document.write(netice);
   1.5.substring() -> Dəyişkənin içərisindəki məlumatları parametrlər ilə kopyalayır.(Parametr ->Başlanğıc və Bitiş)
-  qeyd:başlanğıc parametrəsi bitiş parametrəsindən heç vaxt böyük ola bilməz.
                     var metn = "JavaScript Programming Language";
                     document.write(metn);
                     var netice = metn.substring();
